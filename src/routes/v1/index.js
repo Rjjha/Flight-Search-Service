@@ -11,4 +11,10 @@ router.use('/airports',airportRoutes);
 router.use('/cities',cityRoutes);
 router.use('/flights',flightRoutes);
 
+router.get('/info',(req,res)=>{
+    res.status(200).json({
+        message:'API is live in Flight Service'
+    })
+})
+
 module.exports = router;

@@ -10,7 +10,6 @@ class CrudRepository {
     }
     async create(data)
     {
-        console.log(data.name);
         const response = await this.model.create(data);
         return response;
     }
@@ -50,7 +49,6 @@ class CrudRepository {
             {
                 throw new AppError('Not able to find the resource',StatusCodes.NOT_FOUND);
             }
-            console.log(response);
         return response;
     }
 }
