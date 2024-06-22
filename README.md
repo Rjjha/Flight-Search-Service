@@ -53,3 +53,15 @@ Lets take a look inside the `src` folder
  ```
  npm run dev
  ```
+
+ # Docker setup Commands
+
+ ```
+ docker build -t flight-service .
+ ```
+ ```
+ docker volume create flight-service-node-modules  
+ ```
+ ```
+ docker run -it --init -p 3000:3000 --name flight-service -v "${PWD}:/developer/nodejs/flight-service" -v flight-service-node-modules:/developer/nodejs/flight-service/node_modules flight-service:latest 
+ ```
